@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/f_bold"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        tools:text="@string/stores" />
+
+    <TextView
+        android:id="@+id/tvAdditionCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/f_regular"
+        android:textColor="@color/text_primaryDark"
+        android:textSize="12dp"
+        tools:text="Choose 1 minimum, 2 maximum" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/layout_animation" />
+
+</LinearLayout>

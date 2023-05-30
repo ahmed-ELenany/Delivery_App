@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+          />
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_second"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:text="@string/my_address"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/round_primary_dark"
+        android:fontFamily="@font/f_bold"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/color_second"
+        android:textSize="16dp" />
+</RelativeLayout>

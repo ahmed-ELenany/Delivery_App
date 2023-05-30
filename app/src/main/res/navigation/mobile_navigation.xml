@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <activity
+        android:id="@+id/navigation_cart"
+        android:name="com.mk_tech.delivery.ui.activity.ActivityCart"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_cart" />
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <activity
+        android:id="@+id/navigation_login"
+        android:name="com.mk_tech.delivery.ui.activity.LoginActivity"
+        android:label="@string/login"
+        tools:layout="@layout/activity_login" />
+
+    <activity
+        android:id="@+id/navigation_register"
+        android:name="com.mk_tech.delivery.ui.activity.RegisterActivity"
+        android:label="@string/register"
+        tools:layout="@layout/activity_register" />
+
+    <activity
+        android:id="@+id/navigation_forgetPassword"
+        android:name="com.mk_tech.delivery.ui.activity.ActivitySendEmailCode"
+        android:label="@string/forgot_password"
+        tools:layout="@layout/activity_send_email_code" />
+
+
+    <fragment
+        android:id="@+id/navigation_payment"
+        android:name="com.mk_tech.delivery.ui.fragment.PaymentFragment"
+        android:label=""
+        tools:layout="@layout/webview" />
+
+
+
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.NotificationsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_notification" />
+
+    </navigation>

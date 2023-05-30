@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imgi" />
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@drawable/round_gray"
+                android:padding="6dp"
+                android:src="@drawable/ic_close"
+                app:tint="#BF1D11" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/f_bold"
+                android:lineHeight="18dp"
+                android:textAlignment="viewStart"
+                android:textColor="#000"
+                android:textSize="14dp"
+                tools:text="Product Name Product Name Product Name Product Name" />
+
+            <TextView
+                android:id="@+id/tvProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_semi_bold"
+                android:textColor="#000"
+                android:textSize="12dp"
+                tools:text="30.000 KD" />
+
+            <TextView
+                android:id="@+id/tvProductDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_regular"
+                android:lineHeight="18dp"
+                android:textColor="#505050"
+                android:textSize="12dp"
+                tools:text="Product Details  Product Details  Product Details  Product Details  Product Details  Product Details  Product Details  Product Details  " />
+
+            <TextView
+                android:id="@+id/tvProductTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/f_semi_bold"
+                android:textColor="#000"
+                android:textSize="16dp"
+                tools:text="30.000 KD" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_white_with_strock_gray"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvQuantityDecrement"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_extra_gray"
+                android:backgroundTint="#000000"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/text_primaryDark"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvQuantityIncrement"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_extra_gray"
+                android:backgroundTint="#000"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                  android:text="+"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        android:background="#EBEBEB" />
+</LinearLayout>

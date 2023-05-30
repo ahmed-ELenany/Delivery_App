@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:padding="5dp"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/color_second"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="100dp"
+                    app:tint="#fff"
+                    android:src="@drawable/ic_logo_text_icon" />
+
+                <LinearLayout
+                    android:id="@+id/llContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_top_left_right"
+                    android:backgroundTint="#fff"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                         android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/f_bold"
+                        android:text="@string/sign_in"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20dp" />
+                    <TextView
+                        android:id="@+id/tvSkip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/f_medium"
+                        android:text="@string/skip"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/edEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/round_gray"
+                        android:fontFamily="@font/f_regular"
+                        android:hint="@string/enter_email_address"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textAlignment="viewStart"
+                        android:textColorHint="#A8A6A6"
+                        android:textSize="14dp" />
+
+
+                    <EditText
+                        android:id="@+id/edPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_gray"
+                        android:fontFamily="@font/f_regular"
+                        android:hint="@string/enter_password"
+                        android:inputType="textPassword"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textAlignment="viewStart"
+                        android:textColorHint="#A8A6A6"
+                        android:textSize="14dp" />
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_gray"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:fontFamily="@font/f_bold"
+                        android:padding="5dp"
+                        android:text="@string/login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_second"
+                        android:textSize="18dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_regular"
+                            android:text="@string/don_t_have_an_account"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tvCreateAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/sign_up"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvForgetPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/f_regular"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

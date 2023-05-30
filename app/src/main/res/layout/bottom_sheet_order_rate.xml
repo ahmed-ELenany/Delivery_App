@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/f_bold"
+        android:gravity="center"
+        android:text="@string/rate_you_order"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:stepSize="1"
+        android:theme="@style/RatingBar2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_white_with_strock_gray"
+        android:fontFamily="@font/f_bold"
+        android:gravity="start"
+        android:hint="@string/any_more_notes"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tvDone"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_primary"
+        android:fontFamily="@font/f_bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/send"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp" />
+</LinearLayout>

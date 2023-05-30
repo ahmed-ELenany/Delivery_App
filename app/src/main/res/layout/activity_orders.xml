@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_second"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:text="@string/order_history"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/containerNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_notification_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_bold"
+                android:text="@string/start_ordering_today"
+                android:textColor="@color/text_primaryDark"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/f_regular"
+                android:gravity="center"
+                android:lineHeight="20dp"
+                android:text="@string/look_through_our_menu_and_order_everything_you_crave"
+                android:textColor="#918A8A"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/btnGoToHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_primary_dark"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/f_bold"
+                android:padding="5dp"
+                android:text="@string/start_shopping"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-15dp"
+        android:layout_weight="1"
+        android:layoutAnimation="@anim/layout_animation"
+        android:padding="15dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_second"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+             android:background="@drawable/round_white_with_strock_gray"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:drawableTint="#9D9D9D"
+            android:fontFamily="@font/f_regular"
+            android:gravity="center_vertical"
+             android:padding="10dp"
+            android:textColor="#000"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/search"
+            android:lines="1"
+              android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:background="@drawable/round_primary_dark"
+            android:fontFamily="@font/f_regular"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textColor="@color/color_second"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp" />
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp" />
+</androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "612871468603",
+    "project_id": "wiregcc-e060d",
+    "storage_bucket": "wiregcc-e060d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612871468603:android:f8103e3f1819f3a4184e1e",
+        "android_client_info": {
+          "package_name": "com.store.Wiregcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612871468603-4aq932tgu1ecpi0ded5aib22e6g6t1s7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxq3rTEO3AHmMFLe3l1J0eIu4fD78_Qyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612871468603-4aq932tgu1ecpi0ded5aib22e6g6t1s7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

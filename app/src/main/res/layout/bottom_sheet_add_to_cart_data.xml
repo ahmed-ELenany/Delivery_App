@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:text="@string/add_card"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:checked="false"
+            app:kswBackDrawable="@drawable/flyme_back_drawable"
+            app:kswThumbDrawable="@drawable/flyme_thumb_drawable"
+            app:kswThumbHeight="22dp"
+            app:kswThumbRangeRatio="2.2"
+
+            app:kswThumbWidth="22dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/f_regular"
+        android:text="@string/gift_card_with_a_custom_message"
+        android:textColor="@color/text_primary"
+        android:textSize="12dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_with_strock_gray"
+        android:fontFamily="@font/f_regular"
+        android:gravity="start|top"
+        android:hint="@string/write_your_message_or_card_message"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_video"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/f_bold"
+            android:text="@string/video"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:gravity="start"
+            android:text="@string/record_a_30_second_video_of_yourself"
+            android:textColor="@color/text_second"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/f_bold"
+            android:text="@string/recipient_number"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_white_with_strock_gray"
+            android:fontFamily="@font/f_regular"
+            android:gravity="center"
+            android:hint="+965 12345678"
+            android:inputType="phone"
+            android:padding="5dp"
+            android:textSize="14dp" />
+    </LinearLayout>
+</LinearLayout>

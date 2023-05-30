@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+     android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_margin="15dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/round_with_strock_primary"
+    android:backgroundTint="#E6E6E6"
+    >
+
+<ImageView
+    android:id="@+id/ivLogo"
+    android:layout_width="60dp"
+    android:layout_height="wrap_content"
+    tools:src="@drawable/ic_offer"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/f_regular"
+            android:textAlignment="viewStart"
+            android:layout_weight="1"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="16dp"
+            tools:text="Home" />
+    <RadioButton
+        android:id="@+id/radioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"  />
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_luncher_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_luncher_icon"
+        android:supportsRtl="true"
+
+        android:theme="@style/Theme.appDark"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCjiaGNFr10L9lvcvPSRqPMTpu5zVfXjoA" />
+        <!--android:value="AIzaSyClmBzPtGUCZ2c0vh6AHqnD0gpEeSf6wro"-->
+
+
+        <service
+            android:name=".services.MyFirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--<meta-data
+             android:name="com.google.android.geo.API_KEY"
+             android:value="@string/google_api_key" />-->
+        <activity
+            android:name=".SplashScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.appDark"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MapsActivity"
+            android:exported="true"
+            android:label="maps" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".ui.activity.Activity_language" />
+        <activity android:name=".ui.activity.checkout.Activity_checkout_payment" />
+        <activity android:name=".ui.activity.Activity_language_settings" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.ActivitySendEmailCode" />
+        <activity android:name=".ui.activity.Activity_change_password" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.Activity_product_details" />
+        <activity android:name=".ui.activity.Activity_orders" />
+        <activity android:name=".ui.activity.Activity_address" />
+        <activity android:name=".ui.activity.Activity_address_add" />
+        <activity android:name=".ui.activity.Activity_webView" />
+        <activity android:name=".ui.activity.Activity_payment_status" />
+        <activity android:name=".ui.activity.Activity_orders_details" />
+        <activity android:name=".ui.activity.Activity_company_details" />
+        <activity android:name=".ui.activity.ActivityProfileUpdate" />
+        <activity android:name=".ui.activity.ActivityCart" />
+        <activity android:name=".ui.activity.ActivityProducts" />
+        <activity android:name=".ui.activity.Activity_companies" />
+        <activity android:name=".ui.activity.checkout.Activity_checkout_address" />
+        <activity android:name=".ui.activity.checkout.Activity_checkout_order_summary" />
+        <activity android:name=".ui.activity.Activity_select_area" />
+        <activity android:name=".ui.activity.ActivityTearmsAndFaq" />
+        <activity android:name=".ui.activity.Activity_change_forget_password" />
+
+    </application>
+
+</manifest>

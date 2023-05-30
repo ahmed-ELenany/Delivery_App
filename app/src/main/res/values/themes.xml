@@ -1,0 +1,53 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.appDark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#192C02</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@font/f_regular</item>
+
+    </style>
+
+    <style name="Theme.app" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#192C02</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@font/f_regular</item>
+
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#FFDC8A</item>
+        <item name="colorControlActivated">#FFB810</item>
+        <item name="ratingBarStyle">@style/Widget.AppCompat.RatingBar.Small</item>
+        <item name="android:fontFamily">@font/f_regular</item>
+    </style>
+
+    <style name="RatingBar2" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#FFDC8A</item>
+        <item name="colorControlActivated">#FFB810</item>
+    </style>
+
+    <style name="RatingBarLarg" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#FFDC8A</item>
+        <item name="colorControlActivated">#FFB810</item>
+        <item name="ratingBarStyle">@style/Widget.AppCompat.RatingBar.Indicator</item>
+        <item name="android:fontFamily">@font/f_regular</item>
+    </style>
+
+    <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">#172829</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@font/f_regular</item>
+
+    </style>
+</resources>

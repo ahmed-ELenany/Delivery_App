@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.bottomMenu.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_second"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="16dp"
+            tools:text="@string/Products" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/layout_animation"
+        android:padding="15dp" />
+</LinearLayout>

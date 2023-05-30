@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    app:maskColor="#EDEDED"
+    app:maskCornerRadius="30dp"
+    app:shimmerAngle="30"
+    tools:context=".ui.fragment.bottomMenu.HomeFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_second"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/ivNavSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:src="@drawable/ic_nav_menu" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/ic_logo_text" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/f_bold"
+                    android:gravity="center"
+                    android:textColor="@color/text_primaryDark"
+                    android:textSize="20dp" />
+
+
+                <ImageView
+                    android:id="@+id/ivShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_share" />
+
+                <RelativeLayout
+                    android:id="@+id/RlCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ic_cart_bar" />
+                    <TextView
+                        android:id="@+id/tvCartProductsNum"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:backgroundTint="#B10000"
+                        android:layout_marginTop="-8dp"
+                        android:background="@drawable/round_white"
+                        android:textColor="#fff"
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/f_regular"
+                        android:text="0"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/round_with_strock_primary"
+                android:backgroundTint="#E6E6E6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_search" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#F7CACACA" />
+
+                <TextView
+                    android:id="@+id/tvSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/f_regular"
+                    android:hint="@string/search_products_shops"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:textColorHint="#9D9D9D"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <com.faltenreich.skeletonlayout.SkeletonLayout
+                android:id="@+id/skeletonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="gone"
+                android:orientation="vertical"
+                app:maskColor="#EDEDED"
+                app:maskCornerRadius="30dp"
+                app:shimmerAngle="30">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="15dp">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/sliderTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        app:sliderAnimationDuration="800"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderIndicatorAnimationDuration="800"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMarginTop="50dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="1dp"
+                        app:sliderIndicatorRadius="1.5dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                        app:sliderIndicatorUnselectedColor="@color/text_second"
+                        app:sliderScrollTimeInSec="100"
+                        app:sliderAutoCycleEnabled="false"
+                        app:sliderStartAutoCycle="false"
+                         />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVTopCelebrities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvTypes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/banner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:layout_marginTop="10dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMarginTop="50dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="1dp"
+                        app:sliderIndicatorRadius="1.5dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                        app:sliderIndicatorUnselectedColor="@color/text_second"
+                        app:sliderScrollTimeInSec="20"
+                        app:sliderStartAutoCycle="true" />
+
+                    <LinearLayout
+                        android:id="@+id/llCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/companies"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvCompaniesAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvTopCompanies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvSpecialCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation" />
+                    <LinearLayout
+                        android:id="@+id/llBestSelling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/best_selling"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvBestSellingAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVBest_selling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/banner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:layout_marginTop="10dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMarginTop="50dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="1dp"
+                        app:sliderIndicatorRadius="1.5dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                        app:sliderIndicatorUnselectedColor="@color/text_second"
+                        app:sliderScrollTimeInSec="20"
+                        app:sliderStartAutoCycle="true" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llOffers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/offers"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvOffersAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVOffers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/banner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:layout_marginTop="10dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMarginTop="50dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="1dp"
+                        app:sliderIndicatorRadius="1.5dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                        app:sliderIndicatorUnselectedColor="@color/text_second"
+                        app:sliderScrollTimeInSec="20"
+                        app:sliderStartAutoCycle="true" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llBrands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/brands"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvBrandsAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVBrands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <LinearLayout
+                        android:id="@+id/llElectronicGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/electronic_games"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvElectronicGamesAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVElectronicGames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:visibility="gone"
+                        android:background="@drawable/ic_special_num_back">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/f_bold"
+                                android:text="@string/special_numbers"
+                                android:textColor="#fff"
+                                android:textSize="18dp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/RvSpecialNumCompany"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layoutAnimation="@anim/layout_animation" />
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/llSpecialOffer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/special_offer"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvCountDownAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp"  />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVCountDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation"
+                         />
+
+                    <LinearLayout
+                        android:id="@+id/llCards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/gift_cards"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvGiftCardsAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvGiftCards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/banner4"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:layout_marginTop="10dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMarginTop="50dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="1dp"
+                        app:sliderIndicatorRadius="1.5dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                        app:sliderIndicatorUnselectedColor="@color/text_second"
+                        app:sliderScrollTimeInSec="20"
+                        app:sliderStartAutoCycle="true" />
+
+
+
+                    <LinearLayout
+                        android:id="@+id/llUsedDevices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/used_devices"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvUsedDevicesAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvUsedDevices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+                    <LinearLayout
+                        android:id="@+id/llWorkShop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/workshop"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvWorkshopAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvWorkShop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                   <LinearLayout
+                       android:id="@+id/llCarAccessories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/car_accessories"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvCarAccessoriesAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvCarAccessories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <LinearLayout
+                        android:id="@+id/llHomeAccsessories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/home_accessories"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvHomeAccessoriesAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvHomeAccessories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+
+                    <LinearLayout
+                        android:id="@+id/llToysEntertainment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/toys_entertainment"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvToysEntertainmentAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvToysEntertainment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/celebrities"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvSeeAllCelebrities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvCelebrities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/wire_store"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvWireStoreAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_bold"
+                            android:text="@string/see_all"
+                            android:textColor="@color/text_primaryDark"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/wireSoreVideSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            app:sliderAnimationDuration="800"
+                            app:sliderAutoCycleDirection="back_and_forth"
+                            app:sliderIndicatorAnimationDuration="800"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMarginTop="50dp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="1dp"
+                            app:sliderIndicatorRadius="1.5dp"
+                            app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                            app:sliderIndicatorUnselectedColor="@color/text_second"
+                            app:sliderScrollTimeInSec="100"
+                            app:sliderAutoCycleEnabled="false"
+                            app:sliderStartAutoCycle="false"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvWireStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutDirection="ltr"
+                        android:layoutAnimation="@anim/layout_animation" />
+                </LinearLayout>
+            </com.faltenreich.skeletonlayout.SkeletonLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:src="@drawable/i"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:src="@drawable/ii"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:src="@drawable/iii"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:src="@drawable/iiii"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:src="@drawable/iiiii"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:src="@drawable/iiiiii"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:src="@drawable/v"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:src="@drawable/vi"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

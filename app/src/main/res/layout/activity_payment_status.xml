@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#000"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_second"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:text="@string/payment"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollSuc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="130dp"
+                android:src="@drawable/success_ic"
+                app:tint="#fff" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/f_bold"
+                android:textAllCaps="true"
+                android:text="@string/order_successfull"
+                android:textColor="@color/color_second"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:lineHeight="34dp"
+                android:textAllCaps="true"
+                android:text="@string/thank_you_for_shopping_with_wirestore"
+                android:textColor="@color/text_primary"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/f_regular"
+                android:gravity="center"
+                android:text="@string/a_confirmation_email_has_been_sent_to_your_inbox_to_view_order_details_check_order_history"
+                android:textColor="@color/text_primary"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvMyOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                 android:fontFamily="@font/f_bold"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/my_order"
+                android:textAllCaps="true"
+                android:textColor="@color/color_second"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollFail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/fail_ic"
+                app:tint="#fff" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/f_bold"
+                android:text="@string/error"
+                android:textColor="@color/color_second"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/f_regular"
+                android:text="@string/your_order_has_not_successfully_submitted"
+                android:textColor="@color/color_second"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/f_regular"
+                android:text="@string/please_try_again"
+                android:textColor="@color/text_primary"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tvTryAgain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                 android:fontFamily="@font/f_regular"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/try_again"
+                android:textAllCaps="true"
+                android:textColor="@color/color_second"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

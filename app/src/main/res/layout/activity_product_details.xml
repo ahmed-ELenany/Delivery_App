@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <com.faltenreich.skeletonlayout.SkeletonLayout
+        android:id="@+id/skeletonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        app:maskColor="#EDEDED"
+        app:maskCornerRadius="30dp"
+        app:shimmerAngle="30">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+
+                android:orientation="vertical">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMarginTop="50dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="1dp"
+                    app:sliderIndicatorRadius="1.5dp"
+                    app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+                    app:sliderIndicatorUnselectedColor="@color/text_second"
+                    app:sliderScrollTimeInSec="20"
+                    app:sliderStartAutoCycle="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingStart="25dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="25dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/f_semi_bold"
+                        android:text="Huge Mix"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                             android:fontFamily="@font/f_regular"
+                            android:text="@string/shop_by_product"
+                            android:textColor="@color/text_second"
+                            android:textSize="14dp" />
+                        <TextView
+                            android:id="@+id/tvCompanyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:textAllCaps="true"
+                            android:textAlignment="viewStart"
+                            android:fontFamily="@font/f_regular"
+                            android:text="@string/companies"
+                            android:textColor="@color/text_second"
+                            android:textSize="14dp" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/f_regular"
+        android:text="20.000 KD"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_red"
+        android:layout_gravity="start"
+        android:fontFamily="@font/f_bold"
+        android:text="20.000 KD"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp"
+        />
+
+
+</LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RVAdditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingStart="25dp"
+                        android:paddingEnd="25dp"
+                        android:visibility="gone"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/f_semi_bold"
+                            android:text="@string/description"
+                            android:textColor="@color/text_second"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/f_regular"
+                            android:text="4 Ratings"
+                            android:textColor="@color/text_second"
+                            android:textSize="12dp" />
+
+                        <RatingBar
+                            android:id="@+id/rateBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:numStars="5"
+                            android:rating="3"
+                            android:scaleX="1"
+                            android:scaleY="1"
+                            android:stepSize="1"
+                            android:theme="@style/RatingBar"
+                            android:transformPivotX="0dp"
+                            android:transformPivotY="0dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/f_regular"
+                        android:text="Company activity and information Company activity and information Company activity and information Company activity and information Company activity and information Company activity and information Company activity and information"
+                        android:textColor="@color/text_second"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_extra_gray"
+            android:backgroundTint="#fff"
+            android:padding="5dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="18dp" />
+
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_extra_gray"
+            android:backgroundTint="#fff"
+            android:padding="5dp"
+            android:src="@drawable/ic_share"
+            android:visibility="gone"
+            app:tint="@color/colorPrimaryDark" />
+
+
+        <ImageView
+            android:id="@+id/ivWish"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/round_extra_gray"
+            android:backgroundTint="#F8F8F8"
+            android:padding="5dp"
+            android:src="@drawable/ic_favorite" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvOutOfStoke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+         android:background="@drawable/round_primary_dark"
+        android:backgroundTint="#E4004E"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/f_bold"
+        android:padding="15dp"
+        android:gravity="center"
+        android:text="@string/out_of_stock"
+        android:textColor="#fff"
+        android:visibility="gone"
+        android:textSize="16dp"  />
+    <LinearLayout
+        android:id="@+id/llAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+         android:background="@drawable/round_primary_dark"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tvAddCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:background="@drawable/round_primary_dark"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/f_bold"
+            android:padding="15dp"
+            android:text="@string/add_to_cart"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:drawableStartCompat="@drawable/ic_cart"
+            app:drawableTint="#fff" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvQuantityDecrement"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/round_extra_gray"
+                android:backgroundTint="#ECECEC"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_medium"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/tvQuantityIncrement"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/round_extra_gray"
+                android:backgroundTint="#ECECEC"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

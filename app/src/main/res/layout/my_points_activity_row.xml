@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EBEBEB" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/round_primary_dark"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:text="+80pts"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_bold"
+                android:text="You Earned 0 Points"
+                android:textColor="@color/text_primaryDark"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/f_regular"
+                android:text="Downloading the app earned you 30pts. "
+                android:textColor="@color/text_primaryDark"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

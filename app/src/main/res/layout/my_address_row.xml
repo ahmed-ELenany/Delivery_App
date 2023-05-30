@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <RadioButton
+        android:id="@+id/radioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/f_bold"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="16dp"
+            tools:text="Home" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_primaryDark" />
+
+        <TextView
+            android:id="@+id/tvAddressDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/f_bold"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            tools:text="Andalus, Block3, Street 4" />
+
+        <TextView
+            android:id="@+id/tvStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/f_regular"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            tools:text="Street 3" />
+
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/f_regular"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14dp"
+            tools:text="+96567774875" />
+    </LinearLayout>
+
+</LinearLayout>

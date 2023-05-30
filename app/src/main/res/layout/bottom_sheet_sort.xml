@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:fontFamily="@font/f_bold"
+        android:text="@string/sort"
+        android:textColor="@color/text_second"
+        android:textSize="21dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_exclusive" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:text="@string/exclusive"
+            android:textColor="@color/text_second"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_new" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:text="@string/new_"
+            android:textColor="@color/text_second"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_low_t_hight" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:text="@string/price_low_to_high"
+            android:textColor="@color/text_second"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_high_t_low" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:text="@string/price_high_to_low"
+            android:textColor="@color/text_second"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_delivery" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:text="@string/free_delivery"
+            android:textColor="@color/text_second"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_time_i" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_regular"
+            android:text="@string/delivery_time"
+            android:textColor="@color/text_second"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_primaryDark" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvClearAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_with_strock_primary"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/clear_all"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_primary"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/done"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp" />
+    </LinearLayout>
+</LinearLayout>

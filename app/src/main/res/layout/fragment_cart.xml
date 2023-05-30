@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.bottomMenu.ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_second"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/f_bold"
+            android:gravity="center"
+            android:text="@string/cart"
+            android:textColor="@color/text_primaryDark"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContainerNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_box" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/f_bold"
+            android:text="@string/your_cart_is_empty"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/f_regular"
+            android:gravity="center"
+            android:text="@string/you_have_no_items_in_your_shopping_cart"
+            android:textColor="#918A8A"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContainerDataFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutAnimation="@anim/layout_animation" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/f_bold"
+                        android:text="@string/have_a_promo_code"
+                        android:textColor="@color/text_primaryDark"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_gray"
+                        android:fontFamily="@font/f_semi_bold"
+                        android:gravity="center"
+                        android:hint="@string/code"
+                        android:padding="8dp"
+                        android:textColor="@color/text_primaryDark"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/f_bold"
+                        android:text="@string/sub_total"
+                        android:textColor="#AFAFAF"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvSubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/f_bold"
+                        android:padding="5dp"
+                        android:textColor="#AFAFAF"
+                        android:textSize="16dp"
+                        tools:text="22.000 KD" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/f_bold"
+                        android:text="@string/discount"
+                        android:textColor="#AFAFAF"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/f_bold"
+                        android:padding="5dp"
+                        android:textColor="#AFAFAF"
+                        android:textSize="16dp"
+                        tools:text="22.000 KD" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/f_bold"
+                        android:text="@string/total"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/f_bold"
+                        android:padding="5dp"
+                        android:textColor="#000"
+                        android:textSize="16dp"
+                        tools:text="22.000 KD" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="25dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/tvCheckout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_primary_dark"
+                android:fontFamily="@font/f_bold"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/checkout"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
