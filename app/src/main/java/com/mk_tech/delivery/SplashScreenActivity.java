@@ -49,10 +49,6 @@ boolean splashDone=false,versionCheckDone=false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        VideoView videoView = findViewById(R.id.videoView);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.splash;
-        videoView.setVideoURI(Uri.parse(path));
-        videoView.start();
 
         language = SharedPref.Get_lan(getApplication());
         setLanLocal(getApplication(), language);
@@ -185,7 +181,6 @@ boolean splashDone=false,versionCheckDone=false;
     public void takeAction() {
 
         if(versionCheckDone&&splashDone){
-
 
         //deep link
        /* Intent i;

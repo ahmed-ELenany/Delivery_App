@@ -6,20 +6,11 @@
     android:background="@color/colorPrimaryDark"
     android:layoutDirection="ltr">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <VideoView
-            android:id="@+id/videoView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_logo_text_icon"
-            app:tint="#fff" />
-
-    </LinearLayout>
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scaleType="centerCrop"
+         android:src="@drawable/splash_backgrond"/>
 
 
 </RelativeLayout>

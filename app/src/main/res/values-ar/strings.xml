@@ -27,7 +27,7 @@
     <string name="sign_in">  تسجيل دخول</string>
     <string name="email_address">البريد الالكترونى  </string>
     <string name="enter_email_address">ادخل البريد الالكترونى</string>
-    <string name="password">الرقم السرى *</string>
+    <string name="password">الرقم السرى  </string>
     <string name="enter_password">ادخل الرقم السرى</string>
     <string name="forgot_password">هل نسيت الرقم السرى؟</string>
     <string name="create_an_account">انشاء حساب</string>
@@ -36,7 +36,7 @@
     <string name="enter_full_name">ادخل الاسم كاملا</string>
     <string name="mobile_number"> رقم الهاتف*</string>
     <string name="enter_mobile_number">ادخل رقم الهاتف</string>
-    <string name="confirm_password">تاكيد الرقم السرى *</string>
+    <string name="confirm_password">تاكيد الرقم السرى </string>
     <string name="i_accept_all_terms_amp_conditions_of_le_service">الموافقه على كل الشروط والاحكام ؟</string>
     <string name="already_have_an_account">بالفعل لدى حساب ؟</string>
     <string name="please_enter_the_email_address_which_you_registered_here">الرجاء إدخال عنوان البريد الإلكتروني الذي قمت بتسجيله هنا</string>
@@ -266,4 +266,6 @@
     <string name="Update_is_available">التحديث متوفر</string>
     <string name="update_version_now">نسخه جديدة متوفره من  التطبيق يرجى التحديث الان</string>
     <string name="internet_error">Internet connection failed</string>
+    <string name="user_name">User Name</string>
+    <string name="registration">Registration</string>
 </resources>

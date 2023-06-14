@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText edEmail, edPassword;
     Button btnLogin;
     String token;
-    TextView tvSkip;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -63,27 +62,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         edEmail = findViewById(R.id.edEmail);
         edPassword = findViewById(R.id.edPassword);
-        tvSkip = findViewById(R.id.tvSkip);
 
 
-        ImageView ivBack = findViewById(R.id.ivBack);
-        tvSkip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SharedPref.Save_token(getApplicationContext(), "");
-                SharedPref.Save_IsGuest(getApplicationContext(), true);
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(i);
-
-            }
-        });
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {

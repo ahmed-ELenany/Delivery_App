@@ -17,18 +17,17 @@
 
             <ImageView
                 android:id="@+id/ivLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="120dp"
-                app:tint="#fff"
-                android:src="@drawable/ic_logo_text_icon" />
+                 android:src="@drawable/ic_logo_back_yellow" />
 
             <LinearLayout
                 android:id="@+id/llContainer"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_top_left_right"
                 android:backgroundTint="#fff"

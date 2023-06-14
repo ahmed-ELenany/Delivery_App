@@ -27,7 +27,7 @@
     <string name="sign_in">SIGN IN</string>
     <string name="email_address">Email Address</string>
     <string name="enter_email_address">Enter Email Address</string>
-    <string name="password">Password*</string>
+    <string name="password">Password</string>
     <string name="enter_password">Enter Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="create_an_account">Create an Account</string>
@@ -36,7 +36,7 @@
     <string name="enter_full_name">Enter Full Name</string>
     <string name="mobile_number">Mobile Number*</string>
     <string name="enter_mobile_number">Enter Mobile Number</string>
-    <string name="confirm_password">Confirm Password*</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="i_accept_all_terms_amp_conditions_of_le_service"><![CDATA[I Accept All Terms & Conditions Of Le Service]]></string>
     <string name="already_have_an_account">Already have an Account?</string>
     <string name="please_enter_the_email_address_which_you_registered_here">Please Enter The Email Address Which You Registered Here</string>
@@ -94,7 +94,7 @@
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="follow_us">Follow Us</string>
     <string name="welcome_to_leservice">Welcome to Leservice</string>
-    <string name="phone">Phone</string>
+    <string name="phone">Phone number</string>
     <string name="email">Email</string>
     <string name="saved_addressess">Saved Addresses</string>
     <string name="new_address">New Address</string>
@@ -266,4 +266,6 @@
     <string name="Update_is_available">Update is available</string>
     <string name="update_version_now">A new version is available from application , please update now  </string>
     <string name="internet_error">Internet connection failed</string>
+    <string name="user_name">User Name</string>
+    <string name="registration">Registration</string>
 </resources>
