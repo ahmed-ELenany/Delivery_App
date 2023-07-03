@@ -39,11 +39,15 @@ public class OrdersModel {
         return message;
     }
 
+    public void setData(List<DataModel> data) {
+        this.data = data;
+    }
+
     public List<DataModel> getData() {
         return data;
     }
 
-    public class DataModel {
+    public static class DataModel {
 
         @SerializedName("id")
         @Expose
@@ -75,6 +79,14 @@ public class OrdersModel {
         @Expose
         public String currency;
 
+
+        public void setTotal(String total) {
+            this.total = total;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
 
         public Integer getId() {
             return id;

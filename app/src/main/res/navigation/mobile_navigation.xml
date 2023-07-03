@@ -3,23 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_home">
-
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home">
-
-    </fragment>
-
-
-
-    <fragment
-        android:id="@+id/navigation_search"
-        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.SearchFragment"
-        android:label="@string/search"
-        tools:layout="@layout/fragment_search" />
+    app:startDestination="@id/navigation_ordersHistoryFragment">
 
     <activity
         android:id="@+id/navigation_cart"
@@ -30,9 +14,27 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.ProfileFragment"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.ProfileSettingsFragment"
         android:label="@string/profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile_settings" />
+
+    <fragment
+        android:id="@+id/navigation_profileDetails"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.ProfileDetailsFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile_details" />
+
+    <fragment
+        android:id="@+id/navigation_ordersHistoryFragment"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.OrdersHistoryFragment"
+        android:label="@string/orders_history"
+        tools:layout="@layout/fragment_orders_history" />
+
+    <fragment
+        android:id="@+id/navigation_OrdersCommissionFragment"
+        android:name="com.mk_tech.delivery.ui.fragment.bottomMenu.OrdersCommissionFragment"
+        android:label="@string/orders"
+        tools:layout="@layout/fragment_orders_commisiion" />
 
     <activity
         android:id="@+id/navigation_login"

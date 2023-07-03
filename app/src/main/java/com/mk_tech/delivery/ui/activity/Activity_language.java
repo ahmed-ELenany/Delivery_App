@@ -18,7 +18,6 @@ import com.mk_tech.delivery.R;
 import com.mk_tech.delivery.SplashScreenActivity;
 import com.mk_tech.delivery.Utilities.LocaleHelper;
 import com.mk_tech.delivery.Utilities.SharedPref;
-import com.mk_tech.delivery.ui.fragment.bottomMenu.HomeFragment;
 
 
 public class Activity_language extends AppCompatActivity {
@@ -37,8 +36,7 @@ public class Activity_language extends AppCompatActivity {
         tvAr = findViewById(R.id.tvAr);
         btn_en = findViewById(R.id.btn_en);
 
-        HomeFragment.homeModel = null;
-        tvAr.setOnClickListener(new View.OnClickListener() {
+         tvAr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPref.Save_lan(getApplication(), "ar");

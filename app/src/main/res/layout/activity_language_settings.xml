@@ -14,7 +14,7 @@
             android:id="@+id/llToolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_second"
+            android:background="@color/colorPrimary"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="15dp">
@@ -33,12 +33,21 @@
                 android:fontFamily="@font/f_bold"
                 android:gravity="center"
                 android:text="@string/choose_language"
-                android:textColor="@color/text_primaryDark"
+                android:textColor="@color/text_primary"
                 android:textSize="18dp" />
 
 
         </LinearLayout>
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/top_back"/>
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="-130dp"
+             android:src="@drawable/ic_logo_back_yellow" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -46,8 +55,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:orientation="vertical"
+                 android:orientation="vertical"
                 android:padding="15dp">
 
 
@@ -77,6 +85,7 @@
                     android:layout_marginTop="50dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/f_bold"
+                    android:drawableTint="@color/colorPrimaryDark"
                     android:text="English"
                     android:textAlignment="viewStart"
                     android:textAllCaps="true"
@@ -99,6 +108,7 @@
                     android:text="عربى"
                     android:textAlignment="viewStart"
                     android:textAllCaps="true"
+                    android:drawableTint="@color/colorPrimaryDark"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="15dp" />
 

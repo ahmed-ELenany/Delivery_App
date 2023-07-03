@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -69,23 +70,33 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-                FirebaseInstanceId.getInstance().getInstanceId()
-                        .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                                if (!task.isSuccessful()) {
-                                    Log.w("getInstanceId failed", "getInstanceId failed", task.getException());
-                                    token = "1234";
-                                } else {
-                                    // Get new Instance ID token
-                                    token = task.getResult().getToken();
-                                }
+                SharedPref.Save_token(getApplicationContext(), "1111");
+                SharedPref.Save_IsGuest(getApplicationContext(), false);
+                SharedPref.Save_user_data(getApplicationContext(),  "1"
+                        , "Ahmed Elenany"
+                        , "a.showqy@gmail.com"
+                        , "12345678");
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
 
-                                login();
-                                Log.d("token:", token);
-                            }
-                        });
+//                 FirebaseMessaging.getInstance().setAutoInitEnabled(true);
+//                FirebaseInstanceId.getInstance().getInstanceId()
+//                        .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<InstanceIdResult> task) {
+//                                if (!task.isSuccessful()) {
+//                                    Log.w("getInstanceId failed", "getInstanceId failed", task.getException());
+//                                    token = "1234";
+//                                } else {
+//                                    // Get new Instance ID token
+//                                    token = task.getResult().getToken();
+//                                }
+//
+//                               login();
+//                                Log.d("token:", token);
+//                            }
+//                        });
 
 
             }

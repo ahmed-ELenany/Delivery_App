@@ -21,7 +21,8 @@ import com.mk_tech.delivery.SplashScreenActivity;
 import com.mk_tech.delivery.Utilities.NetworkUtil;
 import com.mk_tech.delivery.Utilities.SharedPref;
 import com.mk_tech.delivery.Utilities.UtilsClass;
-import com.mk_tech.delivery.databinding.FragmentProfileBinding;
+import com.mk_tech.delivery.databinding.FragmentProfileSettingsBinding;
+import com.mk_tech.delivery.databinding.FragmentProfileSettingsBinding;
 import com.mk_tech.delivery.model.ProfileUpdateModel;
 import com.mk_tech.delivery.networkApis.ApiInterface;
 import com.mk_tech.delivery.networkApis.Main_ApiClient;
@@ -39,13 +40,11 @@ import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class ProfileFragment extends Fragment {
+public class ProfileSettingsFragment extends Fragment {
 
-    TextView tvUserName, tvMyAddress,tvTerms, tvFAQ, tvArea, tvEmail, tvLanguage, tvSignIn, tvSignUp, tvAccountDetails, tvOrders,
-            tvPoints,tvLogout;
-    LinearLayout llLoginAndSignup, llContainer, llLanguage, llLoyaltyPoints, llSelectArea;
-    ImageView  ivProfile;
-    private FragmentProfileBinding binding;
+    TextView tvLanguage,tvContactUs, tvAboutUS, tvLogout,tvAccountMoney,tvProfileDetails;
+    LinearLayout llAccountant;
+     private FragmentProfileSettingsBinding binding;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -57,106 +56,48 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentProfileBinding.inflate(inflater, container, false);
+        binding = FragmentProfileSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        tvUserName = binding.tvUserName;
         tvLanguage = binding.tvLanguage;
-        llLoginAndSignup = binding.llLoginAndSignup;
-        llContainer = binding.llContainer;
-        llLanguage = binding.llLanguage;
-        tvSignIn = binding.tvSignIn;
-        tvSignUp = binding.tvSignUp;
-        tvAccountDetails = binding.tvAccountDetails;
-        llLoyaltyPoints = binding.llLoyaltyPoints;
-        tvEmail = binding.tvEmail;
-        tvMyAddress=binding.tvMyAddress;
-        tvOrders = binding.tvOrders;
-        tvPoints = binding.tvPoints;
+        llAccountant = binding.llAccountant;
+        tvAboutUS = binding.tvAboutUS;
+        tvContactUs = binding.tvContactUs;
         tvLogout = binding.tvLogout;
-        llSelectArea = binding.llSelectArea;
-        tvArea = binding.tvArea;
-        tvTerms = binding.tvTerms;
-        tvFAQ = binding.tvFAQ;
-        ivProfile = binding.ivProfile;
+        tvLogout = binding.tvLogout;
+        tvAccountMoney=binding.tvAccountMoney;
+        tvProfileDetails=binding.tvProfileDetails;
+        tvProfileDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.context.navController.navigate(R.id.navigation_profileDetails);
 
-        if (SharedPref.Get_IsGuest(getContext())) {
-            llLoginAndSignup.setVisibility(View.VISIBLE);
-            llContainer.setVisibility(View.GONE);
-            tvLogout.setVisibility(View.GONE);
-        } else {
-            llLoginAndSignup.setVisibility(View.GONE);
-            llContainer.setVisibility(View.VISIBLE);
-            tvUserName.setText(SharedPref.Get_user_data(getContext(), SharedPref.USER_NAME));
-            tvEmail.setText(SharedPref.Get_user_data(getContext(), SharedPref.USER_EMAIL));
+            }
+        });
 
-        }
-
-        tvLanguage.setText(SharedPref.Get_lan(getContext()).equals("ar") ? "عربى" : "English");
-        llLanguage.setOnClickListener(new View.OnClickListener() {
+        tvLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), Activity_language_settings.class));
             }
         });
-        tvMyAddress.setOnClickListener(new View.OnClickListener() {
+
+        tvAboutUS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Activity_address.class));
-            }
-        });
-        tvFAQ.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), ActivityTearmsAndFaq.class).putExtra("type", "faq").putExtra("title", getString(R.string.faq)));
+                startActivity(new Intent(getActivity(), ActivityTearmsAndFaq.class).putExtra("type", "aboutUs").putExtra("title", getString(R.string.about_us)));
 
             }
         });
 
-        tvTerms.setOnClickListener(new View.OnClickListener() {
+        tvContactUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), ActivityTearmsAndFaq.class).putExtra("type", "terms").putExtra("title", getString(R.string.terms_amp_conditions)));
+                startActivity(new Intent(getActivity(), ActivityTearmsAndFaq.class).putExtra("type", "contactUs").putExtra("title", getString(R.string.contact_with_us)));
 
             }
         });
 
 
-        tvSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), LoginActivity.class));
-            }
-        });
-
-        tvSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), RegisterActivity.class));
-            }
-        });
-
-        tvAccountDetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), ActivityProfileUpdate.class));
-            }
-        });
-
-        tvOrders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Activity_orders.class));
-            }
-        });
-
-
-
-        llSelectArea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Activity_select_area.class));
-            }
-        });
 
         tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,12 +137,8 @@ public class ProfileFragment extends Fragment {
                             public void onNext(ProfileUpdateModel value) {
                                 if (value.getSuccess()) {
 
-                                    tvPoints.setText(value.getData().getLoyality_points() + " " + getString(R.string.Points));
-                                    Glide.with(getActivity()).applyDefaultRequestOptions(
-                                            new RequestOptions()
-                                                    .placeholder(R.drawable.ic_user_profile)
-                                                    .error(R.drawable.ic_user_profile)
-                                    ).load(value.getData().getProfile()).circleCrop().into(ivProfile);
+                                    tvAccountMoney.setText(value.getData().getLoyality_points() + " " + getString(R.string.Points));
+
                                 } else {
                                     UtilsClass.Show_AlertDialog("failed !", value.getMessage());
 
@@ -229,8 +166,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        tvArea.setText(SharedPref.Get_user_data(getContext(), SharedPref.AREA));
-        getProfile();
+         getProfile();
     }
 
     @Override

@@ -29,13 +29,12 @@ public class MainActivity extends AppCompatActivity {
     public static ImageView iconImgView;
     public LinearLayout llToolBar;
     public NavController navController;
-    TextView tvTitle, tvCartProductsNum;
-    ImageView ivBack, ivFilter, ivShare;
-    RelativeLayout RlCart;
-    NavHostFragment navHostFragment;
+    TextView tvTitle;
+    ImageView ivBack;
+     NavHostFragment navHostFragment;
     RelativeLayout relativeBottomContainer;
-    LinearLayout llHome, llLove, llNotifications, llProfile, llOffer;
-    ImageView ivHome, ivLove, ivNotifications, ivUserProfile, ivOffer;
+    LinearLayout llHome,  llCommission, llProfile;
+    ImageView ivHome,  ivCommission, ivUserProfile, ivOffer;
     private ActivityMainBinding binding;
 
     @Override
@@ -55,22 +54,17 @@ public class MainActivity extends AppCompatActivity {
             llToolBar = binding.toolBar;
             tvTitle = binding.tvTitle;
             ivBack = binding.ivBack;
-            ivFilter = binding.ivFilter;
-            ivShare = binding.ivShare;
-            RlCart = binding.RlCart;
+
             relativeBottomContainer = binding.relativeBottomContainer;
             llHome = binding.llHome;
-            llLove = binding.llLove;
-            llNotifications = binding.llNotifications;
+            llCommission = binding.llCommission;
             llProfile = binding.llProfile;
-            llOffer = binding.llOffer;
-            tvCartProductsNum = binding.tvCartProductsNum;
+
             ivHome = binding.ivHome;
-            ivLove = binding.ivLove;
-            ivNotifications = binding.ivNotifications;
+            ivCommission = binding.ivCommission;
             ivUserProfile = binding.ivUserProfile;
-            ivOffer = binding.ivOffer;
-            navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+
+             navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
             navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
 
             iconImgView = ivHome;
@@ -80,16 +74,16 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     setTabIcon(ivHome);
-                    MainActivity.context.navController.navigate(R.id.navigation_home);
+                    MainActivity.context.navController.navigate(R.id.navigation_ordersHistoryFragment);
 
                 }
             });
 
-            llNotifications.setOnClickListener(new View.OnClickListener() {
+            llCommission.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    setTabIcon(ivNotifications);
-                    MainActivity.context.navController.navigate(R.id.navigation_notification);
+                    setTabIcon(ivCommission);
+                    MainActivity.context.navController.navigate(R.id.navigation_OrdersCommissionFragment);
 
                 }
             });
@@ -102,69 +96,41 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.context.navController.navigate(R.id.navigation_login);
                     } else {
                         setTabIcon(ivUserProfile);
-                        MainActivity.context.navController.navigate(R.id.navigation_profile);
+                        MainActivity.context.navController.navigate(R.id.navigation_profileDetails);
                     }
 
 
                 }
             });
 
-            llOffer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    setTabIcon(ivOffer);
-                    MainActivity.context.navController.navigate(R.id.navigation_offer);
-                }
-            });
 
-            RlCart.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    MainActivity.context.navController.navigate(R.id.navigation_cart);
 
-                }
-            });
+
         }
 
     }
 
     void setTabIcon(ImageView imageView) {
-        LinearLayout.LayoutParams params1 = (LinearLayout.LayoutParams) iconImgView.getLayoutParams();
-        params1.width = dpToPx(32);
-        params1.height = dpToPx(32);
-        params1.topMargin = dpToPx(23);
-        iconImgView.setLayoutParams(params1);
-        iconImgView.setPadding(dpToPx(3), dpToPx(3), dpToPx(3), dpToPx(3));
-        iconImgView.setBackgroundResource(R.drawable.round_second);
-        ColorStateList csl = AppCompatResources.getColorStateList(context, R.color.colorPrimary);
+
+        ColorStateList csl = AppCompatResources.getColorStateList(context, R.color.icon_menu_color);
         ImageViewCompat.setImageTintList(iconImgView, csl);
 
         iconImgView = imageView;
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) iconImgView.getLayoutParams();
-        params.width = dpToPx(55);
-        params.height = dpToPx(55);
-        params.topMargin = 0;
-        iconImgView.setLayoutParams(params);
-        iconImgView.setPadding(dpToPx(10), dpToPx(10), dpToPx(10), dpToPx(10));
-        iconImgView.setBackgroundResource(R.drawable.round_primary_dark);
-        ImageViewCompat.setImageTintList(iconImgView, AppCompatResources.getColorStateList(context, R.color.text_primary));
+        ImageViewCompat.setImageTintList(iconImgView, AppCompatResources.getColorStateList(context, R.color.colorPrimary));
 
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        tvCartProductsNum.setText(SharedPref.Get_user_data(getApplicationContext(), "CART_PRODUCTS_NUM"));
-    }
+     }
 
     public void setLayoutStyle(boolean bottomMenuVisible, boolean toolBarVisible, boolean isBack, boolean isFilter, boolean isShare, boolean isCart, int titleResource) {
 
         relativeBottomContainer.setVisibility(bottomMenuVisible ? View.VISIBLE : View.GONE);
         llToolBar.setVisibility(toolBarVisible ? View.VISIBLE : View.GONE);
         ivBack.setVisibility(isBack ? View.VISIBLE : View.GONE);
-        ivFilter.setVisibility(isFilter ? View.VISIBLE : View.GONE);
-        RlCart.setVisibility(isCart ? View.VISIBLE : View.GONE);
-        ivShare.setVisibility(isShare ? View.VISIBLE : View.GONE);
+
         tvTitle.setVisibility(titleResource <= 0 ? View.GONE : View.VISIBLE);
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,8 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 navController.popBackStack();
             }
         });
-        tvCartProductsNum.setText(SharedPref.Get_user_data(getApplicationContext(), "CART_PRODUCTS_NUM"));
-        tvTitle.setText(getString(titleResource));
+         tvTitle.setText(getString(titleResource));
     }
 
 }

@@ -11,7 +11,7 @@
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color_second"
+        android:background="@color/colorPrimary"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="15dp"
@@ -34,49 +34,13 @@
             android:layout_weight="1"
             android:fontFamily="@font/f_bold"
             android:gravity="center"
-            android:textColor="@color/text_primaryDark"
+            android:textColor="@color/text_primary"
             android:textSize="20dp"
-            tools:text="Login" />
+            tools:text="title name" />
 
 
-        <ImageView
-            android:id="@+id/ivFilter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_filter" />
 
-        <ImageView
-            android:id="@+id/ivShare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_share" />
 
-        <RelativeLayout
-            android:id="@+id/RlCart"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"
-            android:layout_marginEnd="10dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/ic_cart_bar" />
-            <TextView
-                android:id="@+id/tvCartProductsNum"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:backgroundTint="#B10000"
-                android:layout_marginTop="-8dp"
-                android:background="@drawable/round_white"
-                android:textColor="#fff"
-                android:gravity="center"
-                android:textSize="10dp"
-                android:fontFamily="@font/f_regular"
-                android:text="0"/>
-        </RelativeLayout>
 
     </LinearLayout>
 
@@ -94,18 +58,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bottom_tab_bg" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp">
+             android:paddingTop= "20dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/bottom_menu_background">
 
             <LinearLayout
                 android:id="@+id/llHome"
@@ -117,24 +76,16 @@
 
                 <ImageView
                     android:id="@+id/ivHome"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/round_primary_dark"
-                    android:padding="10dp"
-                    android:src="@drawable/ic_home"
-                    app:tint="#fff" />
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     android:src="@drawable/ic_home"
+                    app:tint="@color/colorPrimary" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/f_regular"
-                    android:text="@string/home"
-                    android:textColor="#000"
-                    android:textSize="10dp" />
+
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/llLove"
+                android:id="@+id/llCommission"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -142,72 +93,16 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/ivLove"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="24dp"
+                    android:id="@+id/ivCommission"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:padding="3dp"
-                    android:src="@drawable/ic_love" />
+                    android:src="@drawable/ic_commission" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/f_regular"
-                    android:text="@string/wishlist"
-                    android:textColor="#000"
-                    android:textSize="10dp" />
+
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/llNotifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/ivNotifications"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="24dp"
-                    android:padding="3dp"
-                    android:src="@drawable/ic_notification" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/f_regular"
-                    android:text="@string/notifications"
-                    android:textColor="#000"
-                    android:textSize="10dp" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/llOffer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/ivOffer"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="24dp"
-                    android:padding="3dp"
-                    android:src="@drawable/ic_offer"
-                    app:tint="#000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/f_regular"
-                    android:text="@string/offers"
-                    android:textColor="#000"
-                    android:textSize="10dp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llProfile"
@@ -219,19 +114,12 @@
 
                 <ImageView
                     android:id="@+id/ivUserProfile"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:padding="3dp"
                     android:src="@drawable/ic_profile" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/f_regular"
-                    android:text="@string/profile"
-                    android:textColor="#000"
-                    android:textSize="10dp" />
+
             </LinearLayout>
 
 

@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="35dp"
-                    android:background="@drawable/round_gray"
+                    android:background="@drawable/round_white_with_strock_gray"
                     android:fontFamily="@font/f_semi_bold"
                     android:text="English"
                     android:textAllCaps="false"

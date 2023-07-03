@@ -16,7 +16,6 @@ import com.mk_tech.delivery.R;
 import com.mk_tech.delivery.SplashScreenActivity;
 import com.mk_tech.delivery.Utilities.LocaleHelper;
 import com.mk_tech.delivery.Utilities.SharedPref;
-import com.mk_tech.delivery.ui.fragment.bottomMenu.HomeFragment;
 
 
 public class Activity_language_settings extends AppCompatActivity {
@@ -35,7 +34,6 @@ public class Activity_language_settings extends AppCompatActivity {
         tvEnglish = findViewById(R.id.tvEnglish);
         tvArabic = findViewById(R.id.tvArabic);
         ivBack = findViewById(R.id.ivBack);
-        HomeFragment.homeModel = null;
 
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override

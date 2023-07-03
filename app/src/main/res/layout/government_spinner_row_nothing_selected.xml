@@ -7,5 +7,6 @@
     android:ellipsize="marquee"
     android:fontFamily="@font/f_regular"
     android:singleLine="true"
+    android:text="@string/nationality"
      android:textColor="#808080"
     android:textSize="16sp" />
